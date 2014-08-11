@@ -4,7 +4,7 @@ var esService = require('../services/esService');
 var Q = require('q');
 
 
-var html_dir = './public//';
+var html_dir = './public/';
 router.get("/home", function (req, res) {
 
     res.sendfile(html_dir + 'search.html');
