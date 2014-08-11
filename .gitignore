@@ -37,4 +37,6 @@ Icon
 .Trashes
 
 node_modules/
+.idea/
+*.iml
 
