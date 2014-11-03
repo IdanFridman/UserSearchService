@@ -2,7 +2,7 @@ var index = "idan";
 var type = "transactionTest";
 ElasticSearchClient = require('elasticsearchclient');
 var Q = require('q');
-sss
+
 
 var serverOptions = {
     host: 'localhost',
