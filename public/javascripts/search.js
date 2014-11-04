@@ -17,7 +17,7 @@ function sendMessage() {
     return false;
 }
 
-ws.addEventListener("message", function(e) {
+ws.addEventListener("message", function (e) {
     // The data is simply the message that we're sending back
     var msg = e.data;
 

@@ -1,5 +1,5 @@
-var index = "idan";
-var type = "transactionTest";
+var index = "my_blog";
+var type = "users";
 ElasticSearchClient = require('elasticsearchclient');
 var Q = require('q');
 
@@ -15,14 +15,17 @@ function performSearch(termToSearch) {
 
     var deferred = Q.defer();
     console.log("Request handler 'search' was called.");
-    var qryObj = {
-        "query" : {
-            "term" : { "_all":termToSearch }
+    var qryObj =
+    {
+        "query": {
+            "match": {
+                "_all": termToSearch
+            }
         }
     };
     elasticSearchClient.search(index, type, qryObj).
         on('data', function (data) {
-            // console.log(data)
+            console.log(data)
             deferred.resolve(JSON.parse(data));
         })
         .on('error', function (err) {
