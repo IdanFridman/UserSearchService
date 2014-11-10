@@ -11,18 +11,20 @@ var serverOptions = {
 
 var elasticSearchClient = new ElasticSearchClient(serverOptions);
 
-function performSearch(termToSearch) {
+function performSearch(field, term) {
+    if (field === undefined) {
+        field = "_all";
+    }
 
     var deferred = Q.defer();
     console.log("Request handler 'search' was called.");
     var qryObj =
     {
         "query": {
-            "match": {
-                "_all": termToSearch
-            }
+            "match": {}
         }
     };
+    qryObj.query.match[field] = term;
     elasticSearchClient.search(index, type, qryObj).
         on('data', function (data) {
             console.log(data)

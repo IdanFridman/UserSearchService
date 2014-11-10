@@ -4,13 +4,14 @@
 
     <title>Search Box Example 1</title>
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
+    <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.css">
     <!-- CSS styles for standard searchTerm box -->
     <style type="text/css">
         #tfheader {
             background-color: #c3dfef;
         }
 
-        #tfnewsearch {
+        .tfnewsearch {
             float: left;
             padding: 20px;
         }
@@ -64,31 +65,55 @@
 </head>
 <body>
 <!-- HTML for SEARCH BAR -->
-<div id="tfheader">
-    <form id="tfnewsearch" method="get" onsubmit="return handleClick()">
-        <input id="myinput" type="text" class="tftextinput" name="q" size="21" maxlength="120">
+<!--<div id="tfheader">
+    <form class="tfnewsearch" method="get" onsubmit="return handleClick()">
+        <input id="myinput" type="text" placeholder="Search" class="tftextinput" name="q" size="21" maxlength="120">
         <input type="submit" value="search" class="tfbutton">
+        <input  type="submit" value="Search by Email"  class="tfbutton">
     </form>
     <div class="tfclear"></div>
 </div>
+-->
+<div class="container">
+    <div class="jumbotron">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <label class="sr-only" for="searchText">Search</label>
+                <input type="text" class="form-control" id="searchText" placeholder="Search">
+            </div>
 
+            <button type="button" id="globalSearchBtn" class="btn btn-info">Global Search</button>
+            <button type="button" id="emailSearchBtn" class="btn btn-success">Email Search</button>
+            <button type="button" id="fooSearchBtn" class="btn btn-warning">Foo Search</button>
+        </form>
+    </div>
+
+</div>
 
 <div id="resultlist">
     </div>
 
 
-<form name="input" method="get" onsubmit="return sendMessage()">
+
+<!--<form name="input" method="get" onsubmit="return sendMessage()">
     <input id="message" type="text">
     <input type="submit" value="Send Message">
-</form>
+</form>-->
+<!--
+<div id="tfheader">
+<form  class="tfnewsearch" role="form" name="email_input" method="get" onsubmit="return searchMessageByEmail()">
+    <input  class="tftextinput" placeholder="Email" id="email_id" type="email">
 
+</form>
+</div>
+-->
 <div id="chatlog">
 </div>
 
 
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="public/javascripts/prettyprint.js"></script>
-<script src="public/javascripts/search.js"></script>
+<script src="/javascripts/prettyprint.js"></script>
+<script src="/javascripts/search.js"></script>
 
 
 </body>

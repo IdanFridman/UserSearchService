@@ -12,8 +12,9 @@ router.get("/home", function (req, res) {
 
 router.get("/search", function (req, res) {
     var termToSearch = req.query.termToSearch;
+    var fieldToSearch=req.query.fieldToSearch;
     console.log("termToSearch=" + termToSearch);
-    Q(esService.performSearch(termToSearch)
+    Q(esService.performSearch(fieldToSearch,termToSearch)
     ).then(function (data) {
             res.send("Session: %j", data);
         });
