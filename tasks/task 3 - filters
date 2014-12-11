@@ -1,0 +1,22 @@
+Search for all employes with last name cohen and age lower(include_lower) than 26.
+
+another example:
+GET /tikal/employee/_search
+{
+  "query": {
+    "filtered": {
+      "filter": {
+        "range": {
+          "age": {
+            "gt": 26
+          }
+        }
+      },
+      "query": {
+        "match": {
+          "last_name": "Cohen"
+        }
+      }
+    }
+  }
+}
