@@ -1,0 +1,17 @@
+sort by age with desc order all docs contains last_name=cohen
+
+GET /tikal/_search
+{
+  "query": {
+    "filtered": {
+      "filter": {
+        "term": {
+         ??
+        }
+      }
+    }
+  },
+  "sort": {
+    ???
+  }
+}
