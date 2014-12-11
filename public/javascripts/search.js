@@ -15,17 +15,14 @@ function sendMessage(message) {
     return false;
 }
 
-function searchMessageByEmail() {
-    var message = document.getElementById('email_id').value;
-    console.log("sending message=" + message);
-    /*$.get('http://localhost:3000/search?termToSearch=' + message + '&fieldToSearch=email', function (responseText) {
-        console.log(responseText);
-        $("#resultlist").empty().append(prettyPrint(responseText));
-    });*/
+function searchMessageByEmail(inputParam) {
     $.ajax({
         type: "GET",
         url: "http://localhost:3000/search",
-        data: { termToSearch: message, fieldToSearch: "email" }
+        data: { termToSearch: inputParam, fieldToSearch: "email" }
+    }).done(function( responseText ) {
+        console.log(responseText);
+        $("#resultlist").empty().append(prettyPrint(responseText));
     });
     return false;
 }
@@ -49,7 +46,6 @@ $(document).ready(function(){
     });
     $('#emailSearchBtn').on('click', function(){
         var query = $("#searchText").val();
-
         searchMessageByEmail(query);
     });
 });
