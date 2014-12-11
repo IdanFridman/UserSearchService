@@ -1,0 +1,4 @@
+1. search for users with id=2
+2. search using query for all users with first name: Jossef
+3. search using dsl for all users with last name: Cohen
+
