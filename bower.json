@@ -1,0 +1,20 @@
+{
+  "name": "UserSearchService",
+  "version": "0.0.0",
+  "homepage": "https://github.com/IdanFridman/UserSearchService",
+  "authors": [
+    "idan <idan.frid@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0"
+  }
+}
