@@ -1,1 +1,3 @@
-t
+1. return aggregations grouped by last_name
+2. return aggregations grouped by interestsand filter by the ones having last_name=cohen
+
