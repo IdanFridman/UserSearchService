@@ -1,3 +1,4 @@
 1. return aggregations grouped by last_name
-2. return aggregations grouped by interestsand filter by the ones having last_name=cohen
+2. return aggregations grouped by interests and filter by the ones having last_name=cohen
+3. return the average age of all docs grouped by interests 
 
