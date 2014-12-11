@@ -1,0 +1,11 @@
+Create new index called Tikal                 
+id: 1
+type name: employee
+first name: Jossef
+last name: Cohen
+age: 28
+Background : I like to play a guitar",
+interests: [ "running", "music" ]
+date:2014-09-24
+location: 40.715, -74.011 //(lat,lon)                      
+
