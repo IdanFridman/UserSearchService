@@ -1,6 +1,7 @@
 1. search for users with id=2
 2. search using DSL query for all users with first name: Jossef
 3. search using DSL query for all users with last name: Cohen
+4. match phrase for all users with  Backgrounge = "I like to climb"
 
 
 
@@ -20,3 +21,13 @@ GET /index_name/type_name/_search
       "{field_to_filter}": "{field_value}"}
   }
 }    
+
+GET /index_name/type_name/_search
+{
+  "query": {
+    "match_phrase": {
+      "Background": "I like to play drums"
+    }
+  }
+}
+
