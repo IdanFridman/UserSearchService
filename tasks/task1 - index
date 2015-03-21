@@ -39,7 +39,8 @@ PUT /tikal/employee/4
 "first_name" : "Tomer",
 "last_name" : "Cohen",
 "age" : 22,
-"Background" : [ "music" ],
+"Background" : "I like to swim",
+"interests" : [ "music", "jumping" ],
 "date": "2014-10-21"
 }
 
