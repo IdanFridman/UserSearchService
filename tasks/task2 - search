@@ -1,4 +1,22 @@
 1. search for users with id=2
-2. search using query for all users with first name: Jossef
+2. search using DSL query for all users with first name: Jossef
 3. search using DSL query for all users with last name: Cohen
 
+
+
+Examples:
+
+query form:
+
+GET /index_name/type_name/_search?q=last_name:cohen
+
+
+dsl form:
+
+GET /index_name/type_name/_search
+{
+  "query": {
+    "match": {
+      "{field_to_filter}": "{field_value}"}
+  }
+}    
