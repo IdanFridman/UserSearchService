@@ -34,6 +34,15 @@ PUT /tikal/employee/3
 "date": "2014-03-22"
 }
 
+PUT /tikal/employee/4
+{
+"first_name" : "Tomer",
+"last_name" : "Cohen",
+"age" : 22,
+"Background" : [ "music" ],
+"date": "2014-10-21"
+}
+
 
 POST /tikal/employee/
 {
