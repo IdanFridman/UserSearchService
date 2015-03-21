@@ -1,4 +1,48 @@
-1. return aggregations grouped by last_name
-2. return aggregations grouped by interests and filter by the ones having last_name=cohen
+1. return docs aggregations grouped by last_name
+2. return docs aggregations grouped by interests and filter by the ones having last_name=cohen
 3. return the average age of all docs grouped by interests 
+
+
+1: GET /index_name/type_name/_search
+{
+  "aggs": {
+    "group_by_last_names": {
+      "terms": {
+        "field": ?
+      }
+    }
+  }
+}
+
+
+2.
+GET /tikal/employee/_search
+{
+  "query": {
+    "filtered": {
+      "filter": {
+        "range": {
+          "age": {
+            "lt": 26
+          }
+        }
+      },
+      "query": {
+        "match": {
+          "last_name": "Cohen"
+        }
+      }
+    }
+  }
+}
+
+3.
+      "aggs": {
+        "avg_age": {
+          "avg": {
+            "field": "age"
+          }
+        }
+      
+  
 
