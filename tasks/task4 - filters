@@ -1,5 +1,5 @@
 Search for all employes with last name cohen and age lower than 26.
-(hint: use include_lower keyword)
+(hint: use lt keyword)
 
 another example:
 GET /tikal/employee/_search
