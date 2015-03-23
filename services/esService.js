@@ -1,5 +1,5 @@
-var index = "tikal";
-var type = "employee";
+var index = "mycompany";
+var type = "login";
 ElasticSearchClient = require('elasticsearchclient');
 var Q = require('q');
 
