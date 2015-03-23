@@ -1,5 +1,5 @@
-var index = "my_blog";
-var type = "users";
+var index = "tikal";
+var type = "employee";
 ElasticSearchClient = require('elasticsearchclient');
 var Q = require('q');
 
@@ -35,10 +35,29 @@ function performSearch(field, term) {
             return deferred.resolve(err);
         })
         .exec();
-    return  deferred.promise;
+    return deferred.promise;
+}
+
+function performIndex(doc) {
+
+    var deferred = Q.defer();
+    if (doc == null) {
+        throw "doc param null";
+    }
+
+    console.log("doc=" + doc);
+    elasticSearchClient.index(index, type, JSON.parse(doc), null, null)
+        .on('data', function (data) {
+            console.log(data)
+            deferred.resolve(JSON.parse(data));
+        })
+        .exec();
+    return deferred.promise;
 }
 
 exports.performSearch = performSearch;
+exports.performIndex = performIndex;
+
 
 
 

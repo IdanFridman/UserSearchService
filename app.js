@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var searchController = require('./controllers/searchController');
+var indexController = require('./controllers/indexController');
+
 
 //var home = require('./controllers/home');
 
@@ -24,6 +26,8 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use('/', express.static(__dirname + '/public'));
 
 app.use('/', searchController);
+app.use('/', indexController);
+
 
 //app.use('/', home);
 
