@@ -1,8 +1,10 @@
 Import from GIT one of the projects:
 
 Java: https://github.com/IdanFridman/TransactionService
+(maven + java8 required)
 
 Nodejs: https://github.com/IdanFridman/UserSearchService
+(bower + npm required)
 
 
 Modify the project and create a Elasticsearch client app that recieves User Login details and Index them
