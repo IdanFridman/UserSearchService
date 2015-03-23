@@ -1,0 +1,27 @@
+Import from GIT one of the projects:
+
+Java: https://github.com/IdanFridman/TransactionService
+
+Nodejs: https://github.com/IdanFridman/UserSearchService
+
+
+Modify the project and create a Elasticsearch client app that recieves User Login details and Index them
+
+Each login contains:
+
+1. Username (String)
+2. Date (String)
+3. location (String)
+
+The index name is: your_company_name
+The mapping type name is: login
+
+
+* let ES generate the id automaticlly.
+
+After finish create another api for searching Terms via key of Username
+
+If finished Index using the bulk API as explained in the slides.
+
+
+
