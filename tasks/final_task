@@ -7,7 +7,7 @@ Nodejs: https://github.com/IdanFridman/UserSearchService
 (bower + npm required)
 
 
-Modify the project and create a Elasticsearch client app that recieves User Login details and Index them
+Modify the project and create a Elasticsearch client app that receives User Login details and Index them
 
 Each login contains:
 
@@ -15,15 +15,15 @@ Each login contains:
 2. Date (String)
 3. location (String)
 
-The index name is: your_company_name
+The index name is: your_app_name
 The mapping type name is: login
 
 
 * let ES generate the id automaticlly.
 
-After finish create another api for searching Terms via key of Username
+After finish create another api calls for full text search Terms via key of Username
 
-If finished Index using the bulk API as explained in the slides.
+When finished improve your task Index by using the bulk API as explained in the slides.
 
 
 
